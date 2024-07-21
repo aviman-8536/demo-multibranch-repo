@@ -6,7 +6,6 @@ pipeline {
             steps {
                 script {
                     echo "Cloning the repository..."
-                    echo "Hello, World!"
                 }
                 git url: 'https://github.com/aviman-8536/multibranch-pipeline-repo.git', branch: 'master'
             }
@@ -24,6 +23,15 @@ pipeline {
                 script {
                     echo "Running tests..."
                     // Add commands to run your tests, e.g., pytest
+                }
+            }
+        }
+        stage('Read and Print Python Script') {
+            steps {
+                script {
+                    echo "Reading and printing Python script..."
+                    def scriptContent = readFile 'main.py'
+                    echo scriptContent
                 }
             }
         }
