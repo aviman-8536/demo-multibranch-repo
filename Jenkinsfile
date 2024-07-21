@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     echo "Cloning the repository..."
+                    echo "Hello, World!"
                 }
                 git url: 'https://github.com/aviman-8536/multibranch-pipeline-repo.git', branch: 'master'
             }
