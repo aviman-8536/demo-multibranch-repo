@@ -1,1 +1,1 @@
-print ("Hello Kolkata")
+print ("Hello kolkata")
